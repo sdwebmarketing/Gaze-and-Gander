@@ -1,0 +1,157 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+@import "global";
+
+header {
+	background: url("images/header-bg.png") left top repeat;
+	position: relative;
+	z-index: 2;
+}
+
+.logo {
+	width: 261px;
+	height: 32px;
+	margin: 2.06em 0;
+}
+
+.gblack {
+	background: $gblack;
+}
+
+.grey {
+	background: $grey;
+}
+
+.cloudy-white {
+	background: $cloudy-white;
+}
+
+.yellow {
+	background: $yellow;
+}
+
+.menu {
+	float: right;
+	font-size: 1.56em;
+	margin-top: 1.3em;
+}
+
+a.menu:hover {
+	color: $white;
+}
+
+.menu, .menu i {
+	color: $white;
+}
+
+.menu i {
+	margin-right: .2em;
+}
+
+.reveal-modal {
+	text-align: center;
+	font-weight: $font-weight-bold;
+}
+
+.close-reveal-modal {
+	color: $cloudy-white;
+}
+
+.reveal-modal .main-nav li {
+	font-size: 2.5em;
+}
+
+.reveal-modal h1, .reveal-modal h2, .reveal-modal h3, .reveal-modal p, .reveal-modal a {
+	color: $cloudy-white;
+}
+
+.monogram {
+	text-align: center;
+	position: fixed;
+	top: 30%;
+	z-index: 0;
+	width: 100%;
+}
+
+.home-hero-banner {
+	margin-top: -97px;
+	position: relative;
+	height: 680px;
+	background: url("images/home-banner.jpg") center top no-repeat;
+	font-weight: $font-weight-bold;
+	color: $white;
+	a, a:hover, a:active, a:visited {
+		color: $white;
+	}
+	p {
+		font-weight: $font-weight-bold;
+	}
+}
+
+.headline h1 {
+	opacity: 0;
+}
+
+.infront-of-monogram {
+	z-index: 1;
+}
+
+.headline {
+	position: absolute;
+	top: 327px;
+	text-align: center;
+	width: 100%;
+	h1 {
+		color: $white;
+	}
+}
+
+.where-is-gaze-and-gander {
+	position: absolute;
+	top: 24px;
+	right: 0;
+	z-index: 2;
+}
+
+.scroll-to-link {
+	display: block;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 593px;
+	font-size: 1.125em;
+	span {
+		position: relative;
+	}
+	i {
+		display: block;
+		font-size: 1.875em;
+		position: absolute;
+		right: -1.1em;
+		top: -3px;
+	}
+}
+
+/* Type */
+
+h1, .large-heading {
+	font-size: 3.125em;
+	font-weight: $font-weight-bold;
+}
+
+h2, .intro-heading {
+	font-size: 1.56em;
+	font-weight: $font-weight-bold;
+}
+
+.intro-heading {
+	border-bottom: solid 3px $yellow;
+}
+
+h3, .standard-heading {
+	font-size: 1.56em;
+	font-weight: 400;
+}
