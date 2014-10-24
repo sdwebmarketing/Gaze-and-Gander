@@ -1,3 +1,5 @@
+[ ![Codeship Status for sdwebmarketing/Gaze-and-Gander](https://www.codeship.io/projects/98500710-3d76-0132-a154-16f7bb650cb9/status)](https://www.codeship.io/projects/43268)
+
 # Foundation libsass template
 
 This is a template to start your own project that uses Grunt and libsass!
