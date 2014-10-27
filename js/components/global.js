@@ -10,10 +10,11 @@ define(['foundation','jquery'],function(foundation,$){
 	
 	// Load Correct Page
 	require(['components/functions'],function(f){
-		f.loadPageScripts(f.helper_getBodyClass());
 		// Load Bindings
 		f.bind_scrollToEle();
 		f.bind_easingScroll();
 		f.bind_titleFadeAndEase();
+		f.bind_scrollEvent();
+		f.zoomImgOnHover();
 	});
 });

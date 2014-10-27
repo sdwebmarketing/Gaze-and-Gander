@@ -17,7 +17,8 @@ require.config({
         easing: '../bower_components/jquery.easing/js/jquery.easing',
         foundation: '../bower_components/foundation/js/foundation',
         modernizer: '../bower_components/modernizr/modernizr',
-        scrollTo: '../bower_components/jquery.scrollTo/jquery.scrollTo.min'
+        scrollTo: '../bower_components/jquery.scrollTo/jquery.scrollTo.min',
+        throttle: '../bower_components/jquery-throttle-debounce/jquery.ba-throttle-debounce',
         //wodry: '../bower_components/wodry/dist/wodry'
     }
 });
