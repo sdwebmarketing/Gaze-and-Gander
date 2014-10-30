@@ -15,6 +15,7 @@ define(['foundation','jquery'],function(foundation,$){
 		f.bind_easingScroll();
 		f.bind_titleFadeAndEase();
 		f.bind_scrollEvent();
+		f.bind_header();
 		f.zoomImgOnHover();
 	});
 });

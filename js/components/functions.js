@@ -8,7 +8,10 @@ define(['jquery','easing','throttle'],function($,easing,throttle){
 		scrollToSpeed: 1500,
 		// Scroll easing type
 		scrollEasingType: 'easeOutExpo',
-		throttleSensitivity: 500
+		throttleSensitivity: 500,
+		throttleHeaderSensitivity: 800,
+		urlOfScrollLogo: 'images/gaze-and-gander-scroll-logo.png',
+		urlOfDefaultLogo: 'images/gaze-and-gander-logo.png'
 	}
 	var Helpers = {
 		helper_getBodyClass: function() {
@@ -23,6 +26,28 @@ define(['jquery','easing','throttle'],function($,easing,throttle){
 			$('.back-to-top').animate({
 				"bottom": "-57px",
 			}, 500);
+		},
+		helper_scrollingHeader: function() {
+			if (! $('header').hasClass('expanded') ) {
+				$('header').animate({
+					'height':'50px',
+				},1200).addClass('expanded').find('.logo').fadeOut(500,function(){
+					// fade finished
+					$(this).attr('src',Var.urlOfScrollLogo).css({'width':'85px','height':'31px','marginTop':'.6em'}).fadeIn().parent().next().animate({
+						'marginTop':'.2em'
+					});
+				});
+			}
+		},
+		helper_resetHeader: function() {
+			$('header').animate({
+				'height':'100px',
+			},1200).removeClass('expanded').find('.logo').fadeOut(500,function(){
+				// face finished
+				$(this).attr('src',Var.urlOfDefaultLogo).css({'width':'261px','height':'32px','marginTop':'2.06em'}).fadeIn().parent().next().animate({
+					'marginTop':'1.3em'
+				});
+			});
 		}
 	}
 	var Methods = {
@@ -37,6 +62,8 @@ define(['jquery','easing','throttle'],function($,easing,throttle){
 					"max-width": "105%",
 					"height": "105%",
 					"max-height": "105%"
+				}).next().animate({
+					"opacity": "0.85"
 				});
 			});
 			$('.work-logo').mouseout(function(){
@@ -45,6 +72,8 @@ define(['jquery','easing','throttle'],function($,easing,throttle){
 					"max-width": "100%",
 					"height": "100%",
 					"max-height": "100%"
+				}).next().animate({
+					"opacity": "0.75"
 				});
 			});
 		},
@@ -91,6 +120,18 @@ define(['jquery','easing','throttle'],function($,easing,throttle){
 				"marginTop": "-10px",
 				"opacity": 1
 			},1500);
+		},
+		bind_header: function() {
+			$(window).scroll(
+				$.throttle(Var.throttleHeaderSensitivity,function(){
+					var st = $(this).scrollTop();
+					if (st == 0){
+						Helpers.helper_resetHeader();
+					} else {
+						Helpers.helper_scrollingHeader();
+					}
+				})
+			);
 		},
 		bind_scrollEvent: function() {
 			var lastScrollTop = 0;

@@ -6,8 +6,10 @@
 
 header {
 	background: url("images/header-bg.png") left top repeat;
-	position: relative;
+	position: fixed;
 	z-index: index($blocks, header);
+	width: 100%;
+	top: 0;
 }
 
 .logo {
@@ -53,6 +55,7 @@ a.menu:hover {
 .reveal-modal {
 	text-align: center;
 	font-weight: $font-weight-bold;
+	position: fixed;
 }
 
 .close-reveal-modal {
@@ -76,7 +79,6 @@ a.menu:hover {
 }
 
 .home-hero-banner {
-	margin-top: -97px;
 	position: relative;
 	width: 100%;
 	height: 680px;
@@ -256,17 +258,14 @@ p, h1, h2, h3, a {
 		max-height: 300px;
 		.effect {
 			height: 310px;
-			background: #242425;
-			opacity: .9;
+			background: #000;
+			opacity: .75;
 			width: 110%;
 		}
 		.effect, .work-logo {
 			position: absolute;
 			top: -5px;
 			left: 0;
-		}
-		&:hover .effect {
-			opacity: .96;
 		}
 	}
 	h3, p { 
