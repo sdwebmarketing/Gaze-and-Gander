@@ -56,14 +56,26 @@ a.menu:hover {
 	text-align: center;
 	font-weight: $font-weight-bold;
 	position: fixed;
+	opacity: .95 !important;
 }
 
 .close-reveal-modal {
-	color: $cloudy-white;
+	color: $white !important;
+	top: .69em !important;
+	right: 1.5em !important;
 }
 
-.reveal-modal .main-nav li {
-	font-size: 2.5em;
+.reveal-modal {
+	.main-nav {
+		margin-top: 8em;
+		li {
+			font-size: 2.5em;
+			line-height: 1.5em;
+			&.active a, & a:hover, & a:active, & a:focus {
+				color: $yellow;
+			}
+		}
+	}
 }
 
 .reveal-modal h1, .reveal-modal h2, .reveal-modal h3, .reveal-modal p, .reveal-modal a {
@@ -116,7 +128,7 @@ a.menu:hover {
 	float: none;
 	.where-is-gaze-and-gander {
 		position: absolute;
-		right: 0;
+		right: 15px;
 		top: 127px;
 		z-index: index($blocks, whereIsGnG);
 	}
@@ -147,10 +159,13 @@ a.menu:hover {
 	}
 }
 
-.back-to-top {
+.button.back-to-top {
 	position: fixed;
 	bottom: -57px;
 	margin-bottom: 0;
+	margin-left: 3px;
+	border-bottom: 0;
+	padding: 0.57rem 2.8rem 0.63rem .75rem;
 	z-index: index($blocks, backToTop);
 }
 
@@ -231,6 +246,10 @@ p, h1, h2, h3, a {
 	}
 }
 
+p a {
+	text-decoration: underline;
+}
+
 .text-center {
 	text-align: center;
 }
@@ -287,8 +306,23 @@ p, h1, h2, h3, a {
 }
 
 .call-to-action {
-	padding-top: 104px;
-	padding-bottom: 88px;
+	padding-top: 94px;
+	padding-bottom: 48px;
+}
+
+.address-container, .telephone-container {
+	padding: 34px 0;
+	position: relative;
+	z-index: index($blocks, infrontOfMonogram);
+}
+
+.telephone-container {
+	padding-bottom: 22px;
+	border-bottom: solid 4px $yellow;
+	.telephone-number {
+		font-size: 1.56em;
+		font-weight: $font-weight-bold;
+	}
 }
 
 .eye-guide {
@@ -307,5 +341,34 @@ p, h1, h2, h3, a {
 	}
 	.yellow & {
 		color: $white;
+	}
+}
+
+footer {
+	height: 290px;
+	background: url('../images/sevenoaks-images.jpg') left top repeat;
+	font-weight: $font-weight-bold;
+	color: $white;
+	text-align: center;
+	position: relative;
+	.social-links {
+		padding-top: 32px;
+		a:hover, a:active {
+			color: $white;
+		} 
+	}
+	.copyright-text {
+		position: absolute;
+		bottom: 10px;
+		width: 70%;
+		margin-left: -50%;
+		left: 65%;
+	}
+	& a {
+		color: $white;
+		font-weight: $font-weight-bold;
+	}
+	& p {
+		font-weight: $font-weight-bold;
 	}
 }
